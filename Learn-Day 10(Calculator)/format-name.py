@@ -1,4 +1,6 @@
 def format_name(f_name, l_name):
+    if f_name == "" or l_name == "":
+        return "You didn't provide any valid input"
     f = f_name.lower().capitalize()
     l = l_name.lower().capitalize()
     return f"{f} {l}"

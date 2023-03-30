@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coffee Store</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .coffee-store {
+        margin: 20px auto;
+        max-width: 800px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #fff;
+      }
+
+      .coffee-store img {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .coffee-store p {
+        text-align: center;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Coffee Stores</h1>
+    </header>
+    {% for store in coffee_stores %}
+    <div class="coffee-store">
+      <img src="{{ store.image }}" alt="Coffee Store Image" />
+      <p>Location: {{ store.location }}</p>
+    </div>
+    {% endfor %}
+  </body>
+</html>
